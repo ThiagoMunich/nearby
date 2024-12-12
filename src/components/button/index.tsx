@@ -1,6 +1,7 @@
 import { TouchableOpacity, TouchableOpacityProps, Text, TextProps, ActivityIndicator } from "react-native"
 
 import { s } from "./styles"
+import { ReactElement, ReactNode } from "react"
 
 interface ButtonProps extends TouchableOpacityProps {
   isLoading?: boolean
@@ -19,6 +20,11 @@ function Title({ children }: TitleProps) {
   return <Text style={s.title}>{children}</Text>
 }
 
+function Icon({ icon }: any) {
+  return icon
+}
+
 Button.Title = Title
+Button.Icon = Icon
 
 export { Button }
