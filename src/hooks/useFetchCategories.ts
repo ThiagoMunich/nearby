@@ -1,18 +1,20 @@
-import { api } from "@/services/api"
 import { useState } from "react"
 
+import { api } from "@/services/api"
+import { CategoryProps } from "@/components/categories"
+
 export function useFetchCategories() {
-  const [categories, setCategories] = useState([])
+  const [categories, setCategories] = useState<CategoryProps[]>([])
 
   async function fetchCategories() {
     try {
-      const { data } = await api.get("/categories")
+      const response = await api.get("/categories")
 
-      setCategories(data)
+      setCategories(response.data)
     } catch (error) {
-      console.log("Erro ao buscar categorias.")
+      console.log(error, "Erro ao buscar categorias.")
     }
   }
 
-  return { categories, fetchCategories }
+  return { categories, setCategories, fetchCategories }
 }
