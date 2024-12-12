@@ -31,8 +31,8 @@ export const Categories = memo(({ data, selectedCategory, onSelect }: Props) => 
         <Category
           name={item.name}
           iconId={item.id}
-          isSelected={selectedCategory === item.id}
           onPress={() => onSelect(item.id)}
+          isSelected={selectedCategory === item.id}
         />
       )}
     />

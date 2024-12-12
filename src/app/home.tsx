@@ -5,6 +5,7 @@ import { View } from "react-native"
 import { Categories } from "@/components/categories"
 import { useFetchPlaces } from "@/hooks/useFetchPlaces"
 import { useFetchCategories } from "@/hooks/useFetchCategories"
+import { Places } from "@/components/places"
 
 export default function Home() {
   const { places, fetchPlaces } = useFetchPlaces()
@@ -26,8 +27,10 @@ export default function Home() {
   }, [selectedCategory])
 
   return (
-    <View style={{ flex: 1 }}>
+    <View style={{ flex: 1, backgroundColor: "#CECECE" }}>
       <Categories data={categories} selectedCategory={selectedCategory} onSelect={setSelectedCategory} />
+
+      <Places data={places} />
     </View>
   )
 }

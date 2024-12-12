@@ -1,8 +1,9 @@
+import { PlaceProps } from "@/components/place"
 import { api } from "@/services/api"
 import { useState } from "react"
 
 export function useFetchPlaces() {
-  const [places, setPlaces] = useState([])
+  const [places, setPlaces] = useState<PlaceProps[]>([])
 
   async function fetchPlaces(category: string) {
     try {
