@@ -1,7 +1,7 @@
 import { View, Text, ViewProps } from "react-native"
 
 import { s } from "./styles"
-import Animated, { FadeInDown, FadeInUp, LinearTransition, SlideInLeft, SlideInRight } from "react-native-reanimated"
+import Animated, { FadeInUp } from "react-native-reanimated"
 
 interface StepProps extends ViewProps {
   title: string
@@ -11,7 +11,7 @@ interface StepProps extends ViewProps {
 }
 export function Step({ title, description, icon, index, ...rest }: StepProps) {
   return (
-    <Animated.View entering={FadeInUp.delay((index + 1) * 1500).duration(1000)} {...rest} style={s.container}>
+    <Animated.View entering={FadeInUp.delay((index + 1) * 1600).duration(1000)} {...rest} style={s.container}>
       <View>{icon}</View>
       <View style={s.details}>
         <Text style={s.title}>{title}</Text>

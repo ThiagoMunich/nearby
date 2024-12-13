@@ -33,7 +33,7 @@ const steps = [
 export function Steps() {
   return (
     <View style={s.container}>
-      <Animated.Text entering={FadeInUp.duration(600).delay(1000)} style={s.title}>
+      <Animated.Text entering={FadeInUp.duration(600).delay(1200)} style={s.title}>
         Veja como funciona:
       </Animated.Text>
 
