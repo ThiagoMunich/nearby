@@ -14,7 +14,7 @@ export default function Index() {
 
       <Steps />
 
-      <Animated.View entering={SlideInDown.delay(6000).springify()}>
+      <Animated.View entering={SlideInDown.delay(5700).springify()}>
         <Button onPress={() => router.push("/home")}>
           <Button.Title>Começar</Button.Title>
         </Button>
