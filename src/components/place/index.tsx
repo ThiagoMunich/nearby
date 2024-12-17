@@ -8,11 +8,14 @@ import { s } from "./style"
 import { colors } from "@/styles/theme"
 
 export type PlaceProps = {
+  latitude: number
+  longitude: number
   id: string
   name: string
   description: string
   coupons: number
   cover: any
+  address: string
 }
 
 interface Props extends TouchableOpacityProps {

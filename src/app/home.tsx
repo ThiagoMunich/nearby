@@ -1,13 +1,17 @@
 import { useEffect, useState } from "react"
 
-import { View } from "react-native"
+import { View, Text, StyleSheet } from "react-native"
 
-import MapView from "react-native-maps"
+import { router } from "expo-router"
 
+import MapView, { Marker, Callout } from "react-native-maps"
+
+import { Places } from "@/components/places"
 import { Categories } from "@/components/categories"
 import { useFetchPlaces } from "@/hooks/useFetchPlaces"
 import { useFetchCategories } from "@/hooks/useFetchCategories"
-import { Places } from "@/components/places"
+
+import { colors, fontFamily } from "@/styles/theme"
 
 export default function Home() {
   const { places, fetchPlaces } = useFetchPlaces()
@@ -45,9 +49,50 @@ export default function Home() {
           latitudeDelta: 0.01,
           longitudeDelta: 0.01,
         }}
-      />
+      >
+        <Marker
+          identifier="current"
+          image={require("@/assets/location.png")}
+          coordinate={{ longitude: initialLocation.longitute, latitude: initialLocation.latitude }}
+        />
+
+        {places?.map((place) => {
+          return (
+            <Marker
+              key={place.id}
+              identifier={place.id}
+              image={require("@/assets/pin.png")}
+              coordinate={{ longitude: place.longitude, latitude: place.latitude }}
+            >
+              <Callout onPress={() => router.navigate(`/market/${place.id}`)}>
+                <View>
+                  <Text style={s.calloutName}>{place.name}</Text>
+                  <Text style={s.calloutAddress}>{place.address}</Text>
+                </View>
+              </Callout>
+            </Marker>
+          )
+        })}
+      </MapView>
 
       <Places data={places} />
     </View>
   )
 }
+
+const s = StyleSheet.create({
+  calloutView: {
+    borderColor: "black",
+    borderWidth: 2,
+  },
+  calloutName: {
+    fontSize: 14,
+    color: colors.gray[600],
+    fontFamily: fontFamily.medium,
+  },
+  calloutAddress: {
+    fontSize: 12,
+    color: colors.gray[600],
+    fontFamily: fontFamily.regular,
+  },
+})
