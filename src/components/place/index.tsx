@@ -1,8 +1,11 @@
 import { View, Text, TouchableOpacityProps, TouchableOpacity, Image } from "react-native"
-import { s } from "./style"
+
 import { MaterialCommunityIcons } from "@expo/vector-icons"
+
+import Animated, { FadeInDown } from "react-native-reanimated"
+
+import { s } from "./style"
 import { colors } from "@/styles/theme"
-import Animated, { FadeInDown, FadeInLeft } from "react-native-reanimated"
 
 export type PlaceProps = {
   id: string
