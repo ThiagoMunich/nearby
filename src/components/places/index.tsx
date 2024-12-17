@@ -29,10 +29,10 @@ export function Places({ data }: Props) {
     >
       <BottomSheetFlatList
         data={data}
+        contentContainerStyle={s.content}
         showsVerticalScrollIndicator={false}
         keyExtractor={(item) => item.id.toString()}
-        renderItem={({ item }) => <Place data={item} />}
-        contentContainerStyle={s.content}
+        renderItem={({ item, index }) => <Place data={item} index={index} />}
         ListHeaderComponent={() => <Text style={s.title}>Explore locais perto de você</Text>}
       />
     </BottomSheet>

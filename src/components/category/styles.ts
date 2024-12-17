@@ -23,7 +23,7 @@ export const s = StyleSheet.create({
 
   isContainerSelected: {
     backgroundColor: colors.green.base,
-    borderWidth: 0,
+    borderColor: colors.green.base,
   },
   isNameSelected: {
     color: colors.gray[100],
