@@ -1,7 +1,6 @@
 import { TouchableOpacity, TouchableOpacityProps, Text, TextProps, ActivityIndicator } from "react-native"
 
 import { s } from "./styles"
-import { ReactElement, ReactNode } from "react"
 
 interface ButtonProps extends TouchableOpacityProps {
   isLoading?: boolean
