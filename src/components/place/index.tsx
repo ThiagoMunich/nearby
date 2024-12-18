@@ -6,17 +6,7 @@ import Animated, { FadeInDown } from "react-native-reanimated"
 
 import { s } from "./style"
 import { colors } from "@/styles/theme"
-
-export type PlaceProps = {
-  latitude: number
-  longitude: number
-  id: string
-  name: string
-  description: string
-  coupons: number
-  cover: any
-  address: string
-}
+import { PlaceProps } from "@/hooks/useFetchMarket"
 
 interface Props extends TouchableOpacityProps {
   data: PlaceProps

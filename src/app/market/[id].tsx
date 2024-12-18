@@ -7,6 +7,7 @@ import { useLocalSearchParams } from "expo-router"
 import { Loading } from "@/components/loading"
 import { useFetchMarket } from "@/hooks/useFetchMarket"
 import { Cover } from "@/components/market/cover"
+import { Details } from "@/components/market/details"
 
 export default function Market() {
   const { market, isLoading, fetchMarket } = useFetchMarket()
@@ -24,6 +25,8 @@ export default function Market() {
   return (
     <View style={{ flex: 1 }}>
       <Cover uri={market.cover} />
+
+      <Details data={market} />
     </View>
   )
 }

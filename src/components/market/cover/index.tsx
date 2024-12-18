@@ -1,12 +1,13 @@
 import React from "react"
 
+import { router } from "expo-router"
+
 import { ImageBackground, ImageBackgroundProps } from "react-native"
 
 import Animated, { FadeInLeft } from "react-native-reanimated"
 
 import { s } from "./styles"
 import { Button } from "@/components/button"
-import { router } from "expo-router"
 import { Feather } from "@expo/vector-icons"
 
 interface Props extends ImageBackgroundProps {
