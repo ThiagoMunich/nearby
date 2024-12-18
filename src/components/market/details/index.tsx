@@ -6,6 +6,7 @@ import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons"
 
 import { s } from "./styles"
 import { Info } from "../info"
+import { Rules } from "../rules"
 import { colors } from "@/styles/theme"
 import { PlaceProps } from "@/hooks/useFetchMarket"
 
@@ -42,11 +43,15 @@ export function Details({ data }: Props) {
 
       <Text style={s.info}>Informações</Text>
 
-      <View style={{ gap: 20 }}>
+      <View style={{ gap: 16 }}>
         {availableInfo.map((info) => {
           return <Info key={info.label} icon={info.icon} label={info.label} />
         })}
       </View>
+
+      <Text style={[s.info, { marginTop: 20 }]}>Regulamento</Text>
+
+      <Rules rules={data.rules} />
     </View>
   )
 }
