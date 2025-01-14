@@ -28,7 +28,7 @@ After cloning navigate to the api folder:
 ```
 
 
-## Improvements
+## ✨ Improvements
 
 - Added animation on the onboarding screen.
 - Added animation on bottom sheet items.
