@@ -4,7 +4,7 @@ import { Alert, View } from "react-native"
 
 import { Redirect, useLocalSearchParams } from "expo-router"
 
-import { useCameraPermissions, CameraView } from "expo-camera"
+import { useCameraPermissions } from "expo-camera"
 
 import { Button } from "@/components/button"
 import { Loading } from "@/components/loading"

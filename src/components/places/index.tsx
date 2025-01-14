@@ -7,8 +7,9 @@ import { router } from "expo-router"
 import BottomSheet, { BottomSheetFlatList } from "@gorhom/bottom-sheet"
 
 import { s } from "./styles"
-import Place, { PlaceProps } from "../place"
+import Place from "../place"
 import { SCREEN_HEIGHT } from "@/configs/device"
+import { PlaceProps } from "@/hooks/useFetchMarket"
 
 interface Props {
   data: PlaceProps[]
