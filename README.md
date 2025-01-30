@@ -3,7 +3,7 @@
 
 Nearby is a mobile app for a benefits club with coupons to use at establishments near you.
 
-This is the project behind the NLW Pocket Mobile event, one of the contents available to Rocketseat students.
+This is the project behind the NLW Pocket Mobile event, one of the contents available to [Rocketseat](https://github.com/Rocketseat) students.
 
 ## How to start the app
 
