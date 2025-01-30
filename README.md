@@ -27,7 +27,7 @@ After cloning navigate to the api folder:
   npm start
 ```
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Mobile
 - React Native + Expo
