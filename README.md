@@ -34,7 +34,7 @@ After cloning navigate to the api folder:
 - TypeScript
 - React Native Maps
 - Expo Router
-- Reanimated & Gesture Handler
+- Reanimated + Gesture Handler
 
 ### Backend
 - Node.js + Express
