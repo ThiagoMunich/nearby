@@ -27,6 +27,21 @@ After cloning navigate to the api folder:
   npm start
 ```
 
+## 🛠️ Tech Stack
+
+### Mobile
+- React Native + Expo
+- TypeScript
+- React Native Maps
+- Expo Router
+- Reanimated & Gesture Handler
+
+### Backend
+- Node.js + Express
+- TypeScript
+- Prisma ORM
+- Zod
+
 
 ## ✨ Improvements
 
