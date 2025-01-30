@@ -50,6 +50,7 @@ After cloning navigate to the api folder:
 - Added animation on the onboarding screen.
 - Added animation on bottom sheet items.
 - Created hooks folder to centralize API calls.
+- Used Zod to leverage requests validations.
 
 
 ## 🔗 Feel free to connect!
